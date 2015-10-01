@@ -9,8 +9,16 @@ router.get('/', function(req, res, next) {
   if (req.user)
     displayName = req.user.displayName;
   res.render('index', {
-    title: "Google OAuth Test Page",
+    title: "EducationalRPG",
     displayName: displayName
+  });
+});
+
+//game
+router.get('/game', function(req, res, next) {
+  console.log("game")
+  res.render('game', {
+    title: "EducationalRPG",
   });
 });
 
@@ -23,7 +31,7 @@ router.get('/auth/google', passport.authenticate('google', {
 
 /* for the callback of Google OAuth */
 router.get('/oauth2callback', passport.authenticate('google', {
-  successRedirect: '/',
+  successRedirect: '/game',
   failureRedirect: '/login'
 }));
 

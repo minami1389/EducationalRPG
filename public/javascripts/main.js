@@ -96,58 +96,7 @@ window.onload = function() {
 		},
 		ontouchstart: function() {
 			//ログイン処理
-
-
-			//core.pushScene(new WorldMap());
-
-			/*Auth(function (err, user){
-				if (err){
-					alert(err);
-					return;
-				}
-				var userDataStore = milkcocoa.dataStore('userdata');
-				var date = new Date();
-
-				var metadata = {
-					'userid': user.user_id,
-					'latest-login-date': date.getYear() +"/"+ date.getMonth() +"/"+ date.getDate() +"|"+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
-				}
-
-				userDataStore.on("set", function (setted){
-					core.pushScene(new WorldMap(0));
-				});
-				userDataStore.set(user.user_id, metadata);
-			});
-			//auth0認証をした後にmilkcocoaに接続
-			function Auth(callback){
-				milkcocoa.user(function (err, user){
-			    	if (err){
-			    		console.log(err);
-			    		callback(err);
-			    		return;
-			    	}
-			    	if (user){
-			    		//userdataを取得する
-			    	}
-			    	else {
-			    		lock.show({ssp : false, usernameStyle : 'username'}, function (err, profile, token){
-			    			if (err){
-			    				console.log(err);
-			    				callback(err);
-			    				return;
-			    			}
-			    			milkcocoa.authWithToken(token, function(err, user){
-			    				if (err){
-			        				console.log(err);
-			        				callback(err);
-			    					return;
-			    				}
-			    				callback(null, profile);
-			    			});
-			    		});
-			    	}
-				});
-			};*/
+			core.pushScene(new WorldMap());
 	  	}
 	});
 //logout
