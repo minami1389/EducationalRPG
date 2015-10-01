@@ -96,6 +96,8 @@ window.onload = function() {
 		},
 		ontouchstart: function() {
 			//ログイン処理
+
+
 			//core.pushScene(new WorldMap());
 
 			/*Auth(function (err, user){
