@@ -17,7 +17,7 @@ var GOOGLE_CLIENT_SECRET = "xYBBACVfwHUfsd8Iw6Gwss1S";
 var CALLBACK_URL = "http://localhost:3000/oauth2callback";
 
 // mongoose
-mongoose.connect('mongodb://localhost/passport-google-oauth-example');
+mongoose.connect('mongodb://localhost/educationalRPG');
 
 // session serializer
 passport.serializeUser(function(req, uid, done) {
@@ -56,7 +56,7 @@ passport.use(new GoogleStrategy({
     }, {
       $set: {
         uid: uid,
-        displayName: displayName
+        displayName: 0
       }
     }, {
       upsert: true
