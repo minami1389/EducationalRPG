@@ -1035,11 +1035,11 @@ window.onload = function() {
             var problemAnswer = this.problemAnswer;
 			if(isAnswer(playerAnswer,problemAnswer)){
                 clearProblemNum++;
-                core.assets[SE_OK].play();
+                //core.assets[SE_OK].play();
                 core.popScene(core.currentScene);
                 core.pushScene(new BattleScene(this.event_type, this.subject, this.chapter, this.difficulty , this.EnemyImagePath,this.BackGroundImagePath, battlebgm, dungeonbgm));
             } else {
-                core.assets[SE_NG].play();
+                //core.assets[SE_NG].play();
                 damageEffect();
             }
 		}
